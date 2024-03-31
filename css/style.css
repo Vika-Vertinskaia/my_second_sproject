@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    outline: none;
+    text-transform: uppercase;
+    font-family: Verdana, Tahoma, sans-serif;
+
+}
+
+:root {
+    --box_sh: 0 0 2px black;
+    --text-sh: 1px 1px 1px black;
+    --bg_col: rgba(255, 255, 255, .3);
+    --bg_col_light: rgba(255, 255, 255, .1);
+    font-size: 62.5%;
+    --border: 1px solid white;
+
+    /* :root{font-size: calc(.5em + 1vw);}   */
+
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/f5.jpg) no-repeat center/cover;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg_col);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+
+
+
+/*иконка домика*/
+.home {
+    color: #c79249;
+    text-shadow: var(--text-sh);
+    font-size: 30px;
+    margin-left: 10vw;
+
+}
+
+header label {
+    margin-right: 10vw;
+    cursor: pointer;
+}
+
+.home:hover {
+    color: white;
+    text-shadow: 0px 0px 5px #362814;
+    transition: .5s;
+}
+
+.navbar {
+    display: none;
+}
+
+label .cross {
+    display: none;
+}
+
+
+/* бургер-меню*/
+.cross,
+.burger {
+
+    color: #c79249;
+    box-shadow: 0 0 10px rgb(51, 50, 50);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+
+}
+
+#burger_checkbox {
+    display: none;
+}
+
+
+
+#burger_checkbox:checked~.navbar {
+    display: block;
+
+}
+
+
+
+/* Если checkbox нажат, то иконка бургера не отображается */
+
+#burger_checkbox:checked~label .burger {
+    display: none;
+
+}
+
+/* Если checkbox нажат, то иконка крестика отображается */
+
+#burger_checkbox:checked~label .cross {
+    display: block;
+
+}
+
+.navbar ul {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70vw;
+}
+
+.navbar ul li {
+    width: calc(70vw / 4);
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.navbar ul li a {
+    height: 6rem;
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    width: calc(70vw / 4);
+    text-shadow: var(--text-sh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li:hover {
+    background-color: var(--bg_col_light);
+    border-bottom: var(--border);
+
+}
+
+.navbar ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem;
+    background-color: var(--bg_col);
+    width: calc(70vw / 4);
+
+}
+
+.navbar ul li:hover ul li {
+    border-bottom: var(--border);
+}
+
+.navbar ul li ul {
+    display: none;
+}
+
+
+
+
+
+@media(max-width:990px) {
+
+    header {
+
+        text-align: center;
+
+
+    }
+
+    header label {
+        display: block;
+        position: absolute;
+        right: 0vw;
+    }
+
+
+    .navbar {
+        background-color: var(--bg_col);
+        position: absolute;
+
+
+        top: 6rem;
+        /*  */
+
+        width: 40vw;
+        height: calc(100vh - 6rem);
+
+    }
+
+    header .navbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        /* 100% от родителя navbar */
+
+    }
+
+
+    .navbar ul li {
+        width: 40vw;
+        position: relative;
+    }
+
+
+    .navbar ul li a {
+        display: block;
+        padding: 2rem 0;
+        font-size: 2rem;
+        color: white;
+        text-shadow: var(--text-sh);
+        border-bottom: var(--border);
+        width: 100%;
+
+    }
+
+    .navbar ul li ul {
+        background-color: var(--bg_col);
+    }
+
+    .navbar ul li:hover {
+        border: none;
+    }
+
+    .navbar ul li:hover ul li {
+        border: none;
+    }
+
+    .navbar ul li ul li:hover {
+        background-color: var(--bg_col_light);
+
+    }
+
+    .navbar ul li ul li a {
+        display: block;
+        padding: 2rem;
+        font-size: 2rem;
+        color: white;
+        text-shadow: var(--text-sh);
+    }
+
+
+
+
+
+    .navbar ul li:hover ul {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        left: 100%;
+        top: 0;
+    }
+
+
+
+
+    /*  
+
+    #burger_checkbox:checked~.navbar {
+        display: block;
+    }
+
+
+    #burger_checkbox:checked~label .burger {
+        display: none;
+    }
+
+    label .cross {
+        display: none;
+    }
+
+    #burger_checkbox:checked~label .cross {
+        display: block;
+    }
+    */
+
+
+}
