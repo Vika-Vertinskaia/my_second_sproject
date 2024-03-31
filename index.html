@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выпадающее менюю. Бюргер-меню.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <header>
+
+
+        <a href="#" class="home"><i class="fa-solid fa-house"></i></a>
+
+
+        <input type="checkbox" id="burger_checkbox">
+
+
+
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">menu 1</a></li>
+
+                <li><a href="#">menu 2</a>
+                    <ul>
+                        <li><a href="#">podmenu 21</a></li>
+                        <li><a href="#">podmenu 22</a>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li><a href="#">menu 3</a>
+                    <ul>
+                        <li><a href="#">podmenu 31</a></li>
+                        <li><a href="#">podmenu 32</a></li>
+                        <li><a href="#">podmenu 33</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu4</a>
+
+
+
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+        <label for="burger_checkbox">
+
+            <svg class="burger" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M5 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+
+
+
+            <svg class="cross" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+
+
+
+
+        </label>
+    </header>
+</body>
+
+</html>
